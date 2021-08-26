@@ -21,7 +21,9 @@ const Main = {
     },
 
     async detect() {
-        let r = await this._model.detect(this._player);
+        try {
+            let r = await this._model.detect(this._player);
+        } catch (e) { }
 
         this._context2d.clearRect(0, 0, this._overlay.width, this._overlay.height);
         this._context2d.strokeStyle = "#0f0";
