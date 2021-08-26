@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+
+    <script src="node_modules/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <script src="node_modules/@tensorflow-models/coco-ssd/dist/coco-ssd.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div style="position: relative;">
+        <video src="media/video.mp4" width="640" height="360" id="player"
+            style="display: none;position: absolute;left: 0;top: 0;" controls></video>
+        <canvas style="position: absolute;left: 0;top: 0;pointer-events: none;" width="640" height="360"
+            id="overlay"></canvas>
+    </div>
+
+    <script src="dist/main.js"></script>
+</body>
+
+</html>
